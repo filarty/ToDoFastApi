@@ -1,5 +1,5 @@
 from pydantic import BaseConfig
-from datetime import date
+from datetime import datetime
 
 
 
@@ -8,6 +8,6 @@ class Task(BaseConfig):
     title: str
     description: str
     completed: bool
-    created_at: date = date.today()
-    updated_at: date = date.today()
+    created_at: datetime = datetime.today()
+    updated_at: datetime = datetime.today()
 
