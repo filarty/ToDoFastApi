@@ -5,11 +5,12 @@ import uvicorn
 
 app = FastAPI()
 
+from schemas import TaskUpdate
 
-@app.get("/")
-async def root():
-    return {"message": "Hello, World!"}
 
+@app.put("/updateTask")
+async def update(id: int, task: TaskUpdate):
+    return {"model": task}
 
 
 
