@@ -1,9 +1,9 @@
-from pydantic import BaseConfig
+from pydantic import BaseModel
 from datetime import datetime
 
 
 
-class Task(BaseConfig):
+class Task(BaseModel):
     id: int
     title: str
     description: str
