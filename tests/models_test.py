@@ -2,7 +2,8 @@ from models import Task
 
 
 
-def test_model_Task():
+def test_model_Task(): 
+    "Check model Task for validation"
     task = Task(id=1, title="first", description="hello, world!", completed=False)
     
     assert task.id == 1
