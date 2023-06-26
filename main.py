@@ -2,8 +2,6 @@ from fastapi import FastAPI
 
 import uvicorn
 
-import schemas
-
 
 app = FastAPI()
 
