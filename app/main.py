@@ -5,9 +5,9 @@ import uvicorn
 
 app = FastAPI()
 
-from main.schemas import TaskUpdate, TaskCreate
+from schemas import TaskUpdate, TaskCreate
 
-from main.models import Task
+from models import Task
 
 
 @app.put("/updateTask")
@@ -26,4 +26,4 @@ async def create_task(task: TaskCreate):
 
 
 if __name__ == "__main__":
-    uvicorn.run(app, reload=True)
+    uvicorn.run(app)

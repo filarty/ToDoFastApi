@@ -1,4 +1,4 @@
-from main.schemas import TaskBase, TaskCreate, TaskUpdate
+from app.schemas import TaskBase, TaskCreate, TaskUpdate
 
 from datetime import datetime
 
