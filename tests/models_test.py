@@ -1,4 +1,4 @@
-from models import Task
+from main.models import Task
 
 
 

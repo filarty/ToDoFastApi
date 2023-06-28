@@ -1,4 +1,4 @@
-from schemas import TaskBase, TaskCreate, TaskUpdate
+from main.schemas import TaskBase, TaskCreate, TaskUpdate
 
 from datetime import datetime
 

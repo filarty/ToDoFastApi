@@ -5,9 +5,9 @@ import uvicorn
 
 app = FastAPI()
 
-from schemas import TaskUpdate, TaskCreate
+from main.schemas import TaskUpdate, TaskCreate
 
-from models import Task
+from main.models import Task
 
 
 @app.put("/updateTask")
