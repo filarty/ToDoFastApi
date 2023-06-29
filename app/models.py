@@ -1,10 +1,12 @@
 from pydantic import BaseModel
+
 from datetime import datetime
 
+from typing import Optional
 
 
 class Task(BaseModel):
-    id: int
+    id: Optional[int]
     title: str
     description: str
     completed: bool

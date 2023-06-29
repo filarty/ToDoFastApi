@@ -1,15 +1,20 @@
 from pydantic import BaseModel, validator
+
 from datetime import datetime
+
+from typing import Optional
+
+import re
 
 
 class TaskBase(BaseModel):
-    id: int
+    id: Optional[int]
     title: str
     description: str
 
     @validator('title')
     def check_not_empty(cls, value):
-        if value == " " or value == "":
+        if re.findall(r'[a-zA-Z]', value) == []:
             raise ValueError("title musst not empty!")
         return value
 
