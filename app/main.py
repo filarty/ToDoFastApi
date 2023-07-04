@@ -12,7 +12,7 @@ from database import crud
 @app.put("/updateTask")
 async def update(task: TaskUpdate):
     try:
-        crud.update_task(task)
+        await crud.update_task(task)
     except:
         return {"message": "bad request!"}
     return {"message": "Task updated!"}
@@ -20,7 +20,7 @@ async def update(task: TaskUpdate):
 @app.get("/getTask")
 async def get_task(id: int):
     try:
-        task = crud.get_task(id)
+        task = await crud.get_task(id)
     except:
         return {"message": "bad request!"}
     return {"task": task}
@@ -28,7 +28,7 @@ async def get_task(id: int):
 @app.post("/createTask")
 async def create_task(task: TaskCreate):
     try:
-        crud.create_task(task)
+        await crud.create_task(task)
     except:
         return {"message": "bad request!"}
     return {"message": "Task created!"}
